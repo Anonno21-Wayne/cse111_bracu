@@ -1,0 +1,91 @@
+//Task 1
+import java.util.Scanner;
+public class task1{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        int count=0;
+
+        if(x>y) {
+            int temp = y;
+            y = x;
+            x = temp;
+        }
+
+        for(int i=x;i<=y;i++){
+            int divisor_count=0;
+            for(int j=1;j<=i;j++) {
+                if (i % j == 0)
+                    divisor_count++;
+            }
+                if (divisor_count == 2)
+                    count++;
+            }
+                System.out.println("There are " +count+ " prime numbers between " +x+" and " +y);
+
+                }
+
+            }
+
+
+//task2
+import java.util.Scanner;
+public class task2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String result = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch == 'a') result += 'z';
+            else result += (char) (ch - 1);
+        }
+        System.out.println(result);
+    }
+}
+
+//task3
+import java.util.Scanner;
+public class task3 {
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("N = ");
+        int n=sc.nextInt();
+        int arr[]=new int [n];
+
+        for(int i=0;i<arr.length;i++){
+                arr[i]=sc.nextInt();
+    }
+
+    for(int i=0;i<arr.length;i++){
+        int a=arr[i];
+        int count=0;
+        boolean isDuplicate=false;
+        for(int j=0;j<i;j++) {
+            if (arr[j] == a) isDuplicate = true;
+        }
+        for(int k=0;k<arr.length;k++) {
+            if (arr[k] == a) count++;
+        }
+        if(!isDuplicate) System.out.println(a+ " - " +count+ " times");
+        }
+    }
+
+    }
+
+//task4
+public class CSECourse {
+    String courseName = "Programming Language II";
+    String courseCode = "CSE111";
+    int credit = 3;
+}
+
+
+
+
+
+
+
+

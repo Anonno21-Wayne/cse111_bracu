@@ -1,0 +1,13 @@
+public class BBAStudent extends Student{
+  String name;
+  String department;
+  
+  public BBAStudent(){
+    this.name="Default";
+    this.department="BBA";
+  }
+
+  public BBAStudent(String name){
+    BBAStudent();
+  }
+}

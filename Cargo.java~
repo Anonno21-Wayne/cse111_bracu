@@ -1,0 +1,47 @@
+//task 4
+
+public class Cargo{
+  private String name;
+  private int weight;
+  public Cargo(String s,int x){
+    this.name=s;
+    this.weight=x;
+  }
+  public String getName(){
+    return name;
+  }
+  public int getWeight(){
+    return weight;
+  }
+}
+
+public class Spaceship{
+  public String sname;
+  public int capacity;
+  public int cweight=0;
+  public Cargo[] cargos=new Cargo[100];
+  public int count;
+  public Spaceship(String s,int x){
+    sname=s;
+    capacity=x;
+  }
+  public void loadCargo(Cargo s){
+    if(s.getWeight()<=capacity){
+      cargos[count++]=s;
+      cweight+=s.getWeight();
+    }
+    else{
+       System.out.println("Can't load "+s.getName()+" inside "+sname+".Exceeds capacity by "+(s.getweight()+cweight-capacity));
+    }
+  }
+  public void displayDetails(){
+    System.out.println("Spaceship Name:" +this.sname);
+    System.out.println("Capacity:"+capacity);
+    System.out.println("Current capacity:"+cweight);
+    System.out.println("Cargo:");
+    for(int i=0;i<count;i++){
+      Cargo s=cargos[i];
+      System.out.print(s.getName()+" ");
+    }
+  }
+}

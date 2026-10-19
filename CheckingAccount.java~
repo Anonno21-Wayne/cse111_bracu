@@ -1,0 +1,18 @@
+public class CheckingAccount extends Account{
+  static int count;
+  double balance;
+  
+  public CheckingAccount(){
+    count++;
+  }
+  
+  public CheckingAccount(double balance){
+    this.balance=balance;
+    count++;
+  }
+    
+  
+  public static int count(){
+    return count;
+  }
+}

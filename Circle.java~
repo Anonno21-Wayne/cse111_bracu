@@ -1,0 +1,14 @@
+public class Circle extends Shape{
+  public int radius;
+  public Circle(){
+    name="Circle";
+    super(name,color);
+  }
+  
+  public void area(){
+    double totalArea=2*3.1416*radius;
+    System.out.println("Area of Red Circle: "+totalArea);
+  }
+}
+    
+  
